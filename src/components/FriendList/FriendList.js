@@ -3,16 +3,16 @@ import propTypes from 'prop-types';
 export default function FriendList({ friends }) {
   return (
     <ul className={styles.friendList}>
-      {friends.map(friend => (
-        <li className={styles.item} key={friend.id}>
-          <span className={friend.isOnline ? styles.true : styles.false}></span>
+      {friends.map(({ id, isOnline, avatar, name }) => (
+        <li className={styles.item} key={id}>
+          <span className={isOnline ? styles.true : styles.false}></span>
           <img
             className={styles.avatar}
-            src={friend.avatar}
+            src={avatar}
             alt="User avatar"
             width="48"
           />
-          <p className={styles.name}>{friend.name}</p>
+          <p className={styles.name}>{name}</p>
         </li>
       ))}
     </ul>

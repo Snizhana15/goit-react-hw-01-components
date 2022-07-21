@@ -1,6 +1,6 @@
 import styles from './statistics.module.css';
 import propTypes from 'prop-types';
-export default function Statistics({ title, stats }) {
+export default function Statistics({ title = 'Upload stats', stats }) {
   return (
     <section className={styles.statistics}>
       <h2 className={styles.title}>{title}</h2>
