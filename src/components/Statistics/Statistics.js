@@ -3,7 +3,7 @@ import propTypes from 'prop-types';
 export default function Statistics({ title = 'Upload stats', stats }) {
   return (
     <section className={styles.statistics}>
-      <h2 className={styles.title}>{title}</h2>
+      {title && <h2 className={styles.title}>{title}</h2>}
       <ul className={styles.statList}>
         {stats.map(item => (
           <li key={item.id} className={styles.item}>
